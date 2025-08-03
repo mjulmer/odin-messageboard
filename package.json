@@ -1,0 +1,24 @@
+{
+  "name": "odin-messageboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjulmer/odin-messageboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjulmer/odin-messageboard/issues"
+  },
+  "homepage": "https://github.com/mjulmer/odin-messageboard#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "pug": "^3.0.3"
+  }
+}
