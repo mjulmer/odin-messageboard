@@ -1,0 +1,11 @@
+html
+  head 
+    title Message Board
+  body 
+    h1 Recent messages 
+    ul 
+      each message in messages 
+        li 
+          p= message.text
+          p= "By " + message.user + " on " + message.added
+        
