@@ -1,0 +1,11 @@
+html
+  head 
+    title Message Board
+  body 
+    h1 New message
+    form(action="/new" method="POST")
+      label(for="message") 
+      textarea#message(name="message_body")  
+      label(for="username") 
+      input#username(type="text" name="user")
+      button Submit
