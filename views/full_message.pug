@@ -1,0 +1,8 @@
+html
+  head 
+    title View message
+  body 
+    h1 Message details
+    p= message.text
+    p= "By " + message.user + " on " + message.added  
+    a(href="/") Back to main page

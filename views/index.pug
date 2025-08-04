@@ -8,4 +8,5 @@ html
         li 
           p= message.text
           p= "By " + message.user + " on " + message.added  
+          a(href="/details/" + message.id) Open message details
     a(href="/new") Add new message
