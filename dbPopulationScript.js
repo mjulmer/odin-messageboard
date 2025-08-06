@@ -1,6 +1,10 @@
 #! /usr/bin/env node
 
+require("dotenv").config();
+
 const { Client } = require("pg");
+
+const { PG_HOST, PG_DB_NAME, PG_USER, PG_PASS, DATABASE_URL } = process.env;
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
@@ -18,7 +22,7 @@ VALUES
 async function main() {
   console.log("seeding...");
   const client = new Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: DATABASE_URL,
   });
   await client.connect();
   await client.query(SQL);
@@ -26,4 +30,6 @@ async function main() {
   console.log("done");
 }
 
+console.log(DATABASE_URL);
+console.log( { PG_HOST, PG_DB_NAME, PG_USER, PG_PASS, DATABASE_URL });
 main();
