@@ -10,7 +10,8 @@ const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   username VARCHAR ( 25 ),
-  message TEXT
+  message TEXT,
+  date_added TIMESTAMP WITH TIME ZONE
 );
 
 INSERT INTO messages (username, message) 
@@ -31,5 +32,5 @@ async function main() {
 }
 
 console.log(DATABASE_URL);
-console.log( { PG_HOST, PG_DB_NAME, PG_USER, PG_PASS, DATABASE_URL });
+console.log({ PG_HOST, PG_DB_NAME, PG_USER, PG_PASS, DATABASE_URL });
 main();

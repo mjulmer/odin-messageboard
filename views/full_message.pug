@@ -3,6 +3,6 @@ html
     title View message
   body 
     h1 Message details
-    p= message.text
-    p= "By " + message.user + " on " + message.added  
+    p= message.message
+    p= "By " + message.username + (message.date_added ? " on " + message.date_added  : "")
     a(href="/") Back to main page

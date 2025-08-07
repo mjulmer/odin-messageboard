@@ -6,7 +6,7 @@ html
     ul 
       each message in messages 
         li 
-          p= message.text
-          p= "By " + message.user + " on " + message.added  
+          p= message.message
+          p= "By " + message.username + (message.date_added ? " on " + message.date_added  : "")
           a(href="/details/" + message.id) Open message details
     a(href="/new") Add new message
