@@ -1,6 +1,6 @@
 const pool = require("./pool.ts");
 
-const tableName: string = "messages";
+const tableName = "messages";
 
 async function getAllMessages() {
   const { rows } = await pool.query(`SELECT * FROM ${tableName}`);
